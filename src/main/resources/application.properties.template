@@ -1,0 +1,10 @@
+spring.application.name=ms-security
+spring.datasource.url=#{DATABASENAME}
+spring.datasource.dbcp2.driver-class-name=org.postgresql.Driver
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.datasource.username=#{DBUSER}
+spring.datasource.password=#{DBPASSWORD}
+
+logging.level.org.hibernate.sql=debug
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update

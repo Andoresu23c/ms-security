@@ -1,0 +1,14 @@
+# Usa una imagen base de OpenJDK
+FROM openjdk:17-jdk-slim
+
+# Establece el directorio de trabajo dentro del contenedor
+WORKDIR /app
+
+# Copia el jar del proyecto al contenedor
+COPY target/myapp.jar /app/myapp.jar
+
+# Expone el puerto en el que correrá la aplicación
+EXPOSE 8080
+
+# Comando para ejecutar la aplicación
+ENTRYPOINT ["java", "-jar", "myapp.jar"]

@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16.1
+    container_name: db-vinculacion
+    restart: always
+    environment:
+      POSTGRES_DB: 'vinculacion'
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: 'Uisrael'
+    ports:
+      - '5432:5432'
